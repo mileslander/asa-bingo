@@ -20,33 +20,47 @@
 
         }
 
+        h2 {
+            text-align: center;
+            padding: 10px;
+            color: black;
+        }
+
         .grid-container {
             display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-columns: repeat(5, 1fr);
             gap: 5px;
+            background-color: white;
         }
 
         .grid-item {
-            background-color: white;
+            background-color: green;
             color: black;
-            padding: 5px;
+            padding: 15px;
             text-align: center;
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            min-height: 100px;
         }
 
-        .h {
-            height: 1px;
-            width: 1400px;
-            color: green;
-            border: 2px solid green;
-            fill: green;
-            margin: 5px;
+        .checkmark {
+            position: relative;
+            cursor: pointer;
+            user-select: none;
         }
 
-        .vr {
-            display: inline-block;
-            width: 1px;
-            height: 50px;
-            border: 1px solid green;
+        .checkmark::after {
+            content: "✓";
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: #FFB81C;
+            text-shadow: 0 0 4px #000;
+            pointer-events: none;
         }
 
         </style>
@@ -57,300 +71,157 @@
 
         <h1>Bears Tennis ASA Bingo Tracker</h1>
 
+        <h2>3 Tasks Done, 20 To Go!</h2>
+
         <div class = "grid-container">
 
-            <span class = "grid-item">
+            <span class = "grid-item" data-id = "pint-night">
 
                 Attend a pint night as a team     
             
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class = "grid-item">
+            <span class = "grid-item" data-id = "wave-chant">
 
                 Start the wave or a chant at a home game    
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class = "grid-item">
+            <span class = "grid-item" data-id = "wing-wednesday">
 
                 Attend a wing wednesday at the pint 
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "back-to-back">
             
                 Win back to back matches  
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <div class= "grid-item">
+            <span class= "grid-item" data-id = "pint-karaoke">
 
                 Do team karaoke at the pint
 
-            </div>
+            </span>
 
-        </div>
-
-
-        <div class = "h"></div>
-
-        <div class = "grid-container">
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "team-playlist">
 
                 Create a team playlist
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "team-volunteering">
 
                 Volunteer as a team for an event or for charity
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item checkmark" data-id = "other-team">
 
                 Go to another team's home game
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "funny-video">
 
                 Make a funny video for the ASA Instagram
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item checkmark" data-id = "all-canadian">
 
                 Have a team member make Academic All-Canadian
 
             </span>
 
-        </div>
-
-        <div class ="h"></div>
-
-        <div class = "grid-container">
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "welcome-scavenger">
 
                 Have a team enter into the Welcome Week scavenger hunt
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "athlete-week">
 
                 Win Pint Whyte athlete of the week
-
-            </span>
-
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
 
             </span>
 
             <span class= "grid-item">
 
                 <a>
-                    <img src = "goldenbears.png" atl = "bear">
+                    <img src = "goldenbears.png" alt = "bear">
                 </a>
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "pint-duncan">
 
                 Take a photo with Duncan at the Pint
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "different-sport">
 
                 Try a different sport as a team
 
             </span>
 
-        </div>
-
-        <div class ="h"></div>
-
-         <div class = "grid-container">
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "photo-shoot">
 
                 Do a game day fit photo shoot and post it to Instagram
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "all-star">
 
                 Have a team member make an all-star list
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "study-hall">
 
                 Bring your team to study hall
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "block-a">
 
                 Have a team member earn a block A sweater
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "themed-practice">
 
                 Have a themed practice and post a photo
 
             </span>
 
-        </div>
-
-        <div class ="h"></div>
-
-         <div class = "grid-container">
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "guest-list">
 
                 Make a team guest list at the Pint
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item checkmark" data-id = "beat-dinos">
 
                 Beat the Calgary Dinos
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "pint-trivia">
 
                 Go to a Pint trivia night
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "secret-santa">
 
                 Do a team secret santa exchange
 
             </span>
 
-            <span class = "grid-item">
-
-                <span class = "vr"></span>
-
-            </span>
-
-            <span class= "grid-item">
+            <span class= "grid-item" data-id = "pint-party">
 
                 Have a post-win after party at the pint
 
