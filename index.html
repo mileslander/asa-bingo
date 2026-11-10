@@ -4,6 +4,8 @@
 
 <head>
 
+    <script src = "./behavior.js" defer></script>
+
     <title>Bears Tennis ASA Bingo Tracker</title>
 
     <style>
@@ -35,13 +37,15 @@
 
         .grid-item {
             background-color: green;
-            color: black;
+            border: none;
+            outline: none;
             padding: 15px;
             text-align: center;
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
             min-height: 100px;
+            cursor: pointer;
         }
 
         .checkmark {
@@ -73,159 +77,159 @@
 
         <h2>3 Tasks Done, 20 To Go!</h2>
 
-        <div class = "grid-container">
+        <span class = "grid-container">
 
-            <span class = "grid-item" data-id = "pint-night">
+            <button class = "grid-item" data-id = "pint-night">
 
                 Attend a pint night as a team     
             
-            </span>
+            </button>
 
-            <span class = "grid-item" data-id = "wave-chant">
+            <button class = "grid-item" data-id = "wave-chant">
 
                 Start the wave or a chant at a home game    
 
-            </span>
+            </button>
 
-            <span class = "grid-item" data-id = "wing-wednesday">
+            <button class = "grid-item" data-id = "wing-wednesday">
 
-                Attend a wing wednesday at the pint 
+                Attend a wing wednesday at the pint
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "back-to-back">
-            
-                Win back to back matches  
+            <button class= "grid-item" data-id = "back-to-back">
 
-            </span>
+                Win back to back matches
 
-            <span class= "grid-item" data-id = "pint-karaoke">
+            </button>
+
+            <button class= "grid-item" data-id = "pint-karaoke">
 
                 Do team karaoke at the pint
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "team-playlist">
+            <button class= "grid-item" data-id = "team-playlist">
 
                 Create a team playlist
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "team-volunteering">
+            <button class= "grid-item" data-id = "team-volunteering">
 
                 Volunteer as a team for an event or for charity
 
-            </span>
+            </button>
 
-            <span class= "grid-item checkmark" data-id = "other-team">
+            <button class= "grid-item checkmark" data-id = "other-team">
 
                 Go to another team's home game
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "funny-video">
+            <button class= "grid-item" data-id = "funny-video">
 
                 Make a funny video for the ASA Instagram
 
-            </span>
+            </button>
 
-            <span class= "grid-item checkmark" data-id = "all-canadian">
+            <button class= "grid-item checkmark" data-id = "all-canadian">
 
                 Have a team member make Academic All-Canadian
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "welcome-scavenger">
+            <button class= "grid-item" data-id = "welcome-scavenger">
 
                 Have a team enter into the Welcome Week scavenger hunt
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "athlete-week">
+            <button class= "grid-item" data-id = "athlete-week">
 
                 Win Pint Whyte athlete of the week
 
-            </span>
+            </button>
 
-            <span class= "grid-item">
+            <button class= "grid-item">
 
                 <a>
                     <img src = "goldenbears.png" alt = "bear">
                 </a>
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "pint-duncan">
+            <button class= "grid-item" data-id = "pint-duncan">
 
                 Take a photo with Duncan at the Pint
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "different-sport">
+            <button class= "grid-item" data-id = "different-sport">
 
                 Try a different sport as a team
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "photo-shoot">
+            <button class= "grid-item" data-id = "photo-shoot">
 
                 Do a game day fit photo shoot and post it to Instagram
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "all-star">
+            <button class= "grid-item" data-id = "all-star">
 
                 Have a team member make an all-star list
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "study-hall">
+            <button class= "grid-item" data-id = "study-hall">
 
                 Bring your team to study hall
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "block-a">
+            <button class= "grid-item" data-id = "block-a">
 
                 Have a team member earn a block A sweater
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "themed-practice">
+            <button class= "grid-item" data-id = "themed-practice">
 
                 Have a themed practice and post a photo
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "guest-list">
+            <button class= "grid-item" data-id = "guest-list">
 
                 Make a team guest list at the Pint
 
-            </span>
+            </button>
 
-            <span class= "grid-item checkmark" data-id = "beat-dinos">
+            <button class= "grid-item checkmark" data-id = "beat-dinos">
 
                 Beat the Calgary Dinos
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "pint-trivia">
+            <button class= "grid-item" data-id = "pint-trivia">
 
                 Go to a Pint trivia night
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "secret-santa">
+            <button class= "grid-item" data-id = "secret-santa">
 
                 Do a team secret santa exchange
 
-            </span>
+            </button>
 
-            <span class= "grid-item" data-id = "pint-party">
+            <button class= "grid-item" data-id = "pint-party">
 
                 Have a post-win after party at the pint
 
-            </span>
+            </button>
 
         </div>
 
